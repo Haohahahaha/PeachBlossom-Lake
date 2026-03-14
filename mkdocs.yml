@@ -11,12 +11,12 @@ theme:
       toggle:
         icon: material/weather-night # 图标
         name: 切换至夜间模式 # 鼠标悬浮提示
-    - scheme: slate # 夜间模式
-      primary: brown 
-      accent: yellow
-      toggle:
-        icon: material/weather-sunny
-        name: 切换至日间模式
+    # - scheme: slate # 夜间模式
+    #   primary: brown 
+    #   accent: yellow
+    #   toggle:
+    #     icon: material/weather-sunny
+    #     name: 切换至日间模式
 
   features:
     - navigation.tabs
