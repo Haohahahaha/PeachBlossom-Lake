@@ -234,18 +234,18 @@
 
 !!! example "有趣的点子，下方评论区见！不过我不一定会实现，开源+互助即可。"
 
-<script src="https://giscus.app/client.js"
-        data-repo="Haohahahaha/PeachBlossom-Lake"
-        data-repo-id="R_kgDORmxt0A"
-        data-category="Announcements"
-        data-category-id="DIC_kwDORmxt0M4C4Zco"
-        data-mapping="title"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="dark"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
+    <script src="https://giscus.app/client.js"
+            data-repo="Haohahahaha/PeachBlossom-Lake"
+            data-repo-id="R_kgDORmxt0A"
+            data-category="Announcements"
+            data-category-id="DIC_kwDORmxt0M4C4Zco"
+            data-mapping="title"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="light"
+            data-lang="zh-CN"
+            crossorigin="anonymous"
+            async>
+    </script>
