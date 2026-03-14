@@ -6,8 +6,8 @@
 
     - 📧欢迎提issue交流，也欢迎有个人服务器配置需求的朋友邮件联系，我或可提供付费服务。 
   
-    !!! info "这里有一只[许愿池里的王八🐢](https://peachlake.haohaha.cn/Todo/list/)正在游泳！"
-        点击链接即可进入许愿评论区。
+    !!! info "这里有一只许愿池里的王八🐢正在游泳！"
+        点击==[此处🐢](https://peachlake.haohaha.cn/Todo/list/)==即可进入许愿评论区。
 
     😋浩哈哈哈哈_
 
