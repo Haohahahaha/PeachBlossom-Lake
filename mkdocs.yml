@@ -38,6 +38,13 @@ theme:
 # 这里写目录
 nav:
   - 主页: index.md
+  - 01-AIO 配置流程: Server/01-AIO_Server.md
+  - 02-PVE 部署: Server/02-PVE_deploy.md
+  - 03-PVE 核显直通: Server/03-CoreGPU_Passthrough.md
+  - 04-PVE 解决空间自增长: Server/PVE_Disk.md
+  - 05-本地服务器远程连接: Server/05-SSH_Remote_Local.md
+  - 06-部署 NextCloud-Docker: Server/06-nextcloud_docker.md
+  - 07-SSL 证书部署与更新: Server/07-ssl_update.md
 
 extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
