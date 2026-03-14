@@ -234,40 +234,18 @@
 
 !!! example "有趣的点子，下方评论区见！不过我不一定会实现，开源+互助即可。"
 
-<div class="comments-container">
-    <h3>评论</h3>
-    <div class="giscus"></div>
-
-    <script>
-        function loadGiscus() {
-            const script = document.createElement('script');
-            script.src = 'https://giscus.app/client.js';
-            script.setAttribute('data-repo', '{{ config.extra.comments.repo }}');
-            script.setAttribute('data-repo-id', '{{ config.extra.comments.repo_id }}');
-            script.setAttribute('data-category', '{{ config.extra.comments.category }}');
-            script.setAttribute('data-category-id', '{{ config.extra.comments.category_id }}');
-            script.setAttribute('data-mapping', 'pathname');
-            script.setAttribute('data-reactions-enabled', '1');
-            script.setAttribute('data-emit-metadata', '0');
-            script.setAttribute('data-theme', 'preferred_color_scheme');
-            script.setAttribute('crossorigin', 'anonymous');
-            script.async = true;
-
-            document.querySelector('.giscus').appendChild(script);
-        }
-
-        // 延迟加载评论
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                if (entries[0].isIntersecting) {
-                    loadGiscus();
-                    observer.disconnect();
-                }
-            });
-
-            observer.observe(document.querySelector('.comments-container'));
-        } else {
-            loadGiscus();
-        }
-    </script>
-</div>
+<script src="https://giscus.app/client.js"
+        data-repo="Haohahahaha/PeachBlossom-Lake"
+        data-repo-id="R_kgDORmxt0A"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORmxt0M4C4Zco"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>

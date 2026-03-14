@@ -58,14 +58,6 @@ extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
   - mkdocs/extra_admonition.css # 自定义admonition
 
-extra:
-  comments:
-    provider: giscus
-    repo: username/repo
-    repo_id: your_repo_id
-    category: Comments
-    category_id: your_category_id
-
 markdown_extensions:
     # Admonitions
     - admonition
