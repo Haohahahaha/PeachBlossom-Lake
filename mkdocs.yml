@@ -71,14 +71,11 @@ markdown_extensions:
 extra:
   homepage: http://haohaha.cn
   social: # icons
-    - icon: fontawesome/brands/bilibili
-      link: https://space.bilibili.com/1436476753
-      name: Bilibili | 浩哈哈哈哈 # 鼠标悬浮提示
     - icon: fontawesome/brands/github
-      link: https://github.com/Haohahahaha
+      link: https://github.com/Haohahahaha/PeachBlossom-Lake
       name: GitHub | Haohahahaha
     - icon: simple/githubactions
-      link: https://github.com/Haohahahaha/cs/actions
+      link: https://github.com/Haohahahaha/PeachBlossom-Lake/actions
       name: GitHub Actions
 ## [bottom-left corner]
 copyright: 
