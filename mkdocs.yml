@@ -52,11 +52,19 @@ nav:
       - 06-部署 NextCloud-Docker: Server/06-nextcloud_docker.md
       - 07-SSL 证书部署与更新: Server/07-ssl_update.md
     - ToDo:
-      - Todo List: Todo/list.md
+      - 许愿池里的忘吧🐢: Todo/list.md
 
 extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
   - mkdocs/extra_admonition.css # 自定义admonition
+
+extra:
+  comments:
+    provider: giscus
+    repo: username/repo
+    repo_id: your_repo_id
+    category: Comments
+    category_id: your_category_id
 
 markdown_extensions:
     # Admonitions
