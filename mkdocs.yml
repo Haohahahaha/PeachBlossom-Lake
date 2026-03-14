@@ -1,0 +1,87 @@
+site_name: 桃花潭
+theme: 
+  name: material
+  icon:
+    logo: material/library
+  favicon: https://cs.haohaha.cn/image/favicon.png
+  palette:
+    - scheme: default # 日间模式
+      primary: brown # 上方的
+      accent: yellow # 链接等可交互元件的高亮色
+      toggle:
+        icon: material/weather-night # 图标
+        name: 切换至夜间模式 # 鼠标悬浮提示
+    - scheme: slate # 夜间模式
+      primary: brown 
+      accent: yellow
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至日间模式
+
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.indexes
+    # navigation.expand # 展开
+    - navigation.prune # 折叠
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - Instant Loading
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    # Anchor tracking
+    - navigation.tracking
+  language: zh
+
+# 这里写目录
+nav:
+  - 主页: index.md
+
+extra_css:
+  - mkdocs/css/no-footer.css # 不使用底部的翻页
+  - mkdocs/extra_admonition.css # 自定义admonition
+
+markdown_extensions:
+    # Admonitions
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    # Icons, Emojis
+    - attr_list
+    - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    # Formatting
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
+    # Diagrams
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    
+extra:
+  homepage: http://haohaha.cn
+  social: # icons
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/1436476753
+      name: Bilibili | 浩哈哈哈哈 # 鼠标悬浮提示
+    - icon: fontawesome/brands/github
+      link: https://github.com/Haohahahaha
+      name: GitHub | Haohahahaha
+    - icon: simple/githubactions
+      link: https://github.com/Haohahahaha/cs/actions
+      name: GitHub Actions
+## [bottom-left corner]
+copyright: 
+  <a href="https://beian.miit.gov.cn/" target="_blank">冀ICP备2024078994号</a><br/>
+  <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13020302001386" target="_blank">冀公网安备13020302001386号</a><br/>
+  Copyright &copy; 2022-现在 浩哈哈哈哈_ # 左下角的版权声明
