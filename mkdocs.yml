@@ -52,7 +52,7 @@ nav:
       - 06-部署 NextCloud-Docker: Server/06-nextcloud_docker.md
       - 07-SSL 证书部署与更新: Server/07-ssl_update.md
     - ToDo:
-      - 许愿池里的忘吧🐢: Todo/list.md
+      - 许愿池里的🐢: Todo/list.md
 
 extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
