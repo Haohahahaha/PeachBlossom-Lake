@@ -348,3 +348,14 @@ ifconfig <网卡> inet <ip> netmask <子网掩码>
 ### 配置 WebDAV 服务
 
 见 [TrueNAS下的WebDAV服务配置 - firemakergk@Github](https://github.com/firemakergk/aquar-build-helper/blob/master/details/TrueNAS%E4%B8%8B%E7%9A%84WebDAV%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE.md)
+
+### 重启后恢复权限
+
+```bash
+# 恢复组权限
+pw addgroup www-data -g 33
+# 恢复用户权限
+pw adduser www-data -u 33 -g 33
+# 查看权限是否恢复
+ls -la /mnt/[YOUR_POOL]/[YOUR_POOL]/nextcloud/data
+```
