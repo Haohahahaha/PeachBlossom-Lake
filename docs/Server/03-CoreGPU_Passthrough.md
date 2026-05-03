@@ -1,5 +1,9 @@
 # 核显直通笔记
 
+!!! info "更新记录"
+
+    20260503: 新增显卡直通出现的问题
+
 !!! info ""
     
     author: Haohahahaha (Haorui Zhang)
@@ -166,3 +170,66 @@ hostpci1: 0000:00:1f.3,romfile=gen12_gop.rom
 ---
 
 结束啦，其实早就想做核显直通的笔记了（24年7月），结果这部分的施工最早也才是1月初哈城之旅。好啦，趁着2月这次机会，抓紧写好也不错嘛😉
+
+# 显卡直通问题
+
+- @jht 的电脑最近有点炸，分析原因才知道，是直通显卡的虚拟机，显卡占用IO，引发了QEMU内核的死机
+    - 具体表现：
+        - 挂载usb设备时，usb设备列表无法打开；
+        - PVE界面无法访问（转圈圈）
+        - 其余虚拟机运行正常，挂载独显的机器炸了
+        - 不正常关机，导致掉盘了，有两个虚拟机打不开（实际上是没找到磁盘，磁盘没挂载），一条`lvchange -ay /dev/lvm-jht2/vm-101-disk-0` 就可以解决了。 
+    - 分析：所以看起来一眼显卡问题
+    - 问题：没屏蔽 `nouveau` 驱动导致的。
+    !!! note "GPT 总结"
+        最开始显卡没有被 vfio 正确接管（nouveau/未绑定），QEMU 在启动或运行中访问 GPU 时，驱动链是混乱的。然后某个时刻（通常是 VM 启动、关机、reset 或中断初始化），QEMU 通过 vfio 向 GPU 发起操作，但 GPU 没有正确响应（可能是驱动不一致、设备没 reset 成功、或资源冲突），内核就在等待这个响应。
+    - 解决办法
+        ```bash
+        # 从 PVE 管理里摘掉，避免继续拖死整个系统
+        mv /etc/pve/qemu-server/106.conf /root/106.conf.bak 
+        # 恢复界面
+        systemctl restart pvestatd pveproxy pvedaemon
+        ``` 
+        接下来是 GPT 给的步骤：
+        ```bash
+        # 结论直接给你：你的 4060Ti 根本没有被 vfio 接管，当前是“未绑定 + 可能被 nouveau 抢占/残留”的半残状态，这种最容易把 QEMU 卡进 D 状态。这就是你刚才整机被拖死的根因。
+
+        # 你现在这行已经说明问题了：
+        # 没有看到 Kernel driver in use: vfio-pci
+        # 只看到 Kernel modules: nouveau
+
+        # 先彻底修正驱动绑定，不然还会复现。
+
+        # 第一步，屏蔽 nouveau：
+        echo "blacklist nouveau" > /etc/modprobe.d/blacklist-nouveau.conf
+        echo "options nouveau modeset=0" >> /etc/modprobe.d/blacklist-nouveau.conf
+
+        # 第二步，绑定 vfio（你的显卡ID是 10de:2803 和 10de:22bd）：
+        echo "options vfio-pci ids=10de:2803,10de:22bd" > /etc/modprobe.d/vfio.conf
+
+        # 第三步，确保 vfio 模块加载顺序正确：
+        echo -e "vfio\nvfio_pci\nvfio_iommu_type1\nvfio_virqfd" > /etc/modules
+
+        # 第四步，加内核参数（很关键）：
+        # 编辑 /etc/default/grub
+        # 把这一行改成：
+        GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt video=efifb:off"
+
+        # 然后执行：
+        update-grub
+        update-initramfs -u
+
+        # 重启机器
+
+        # 重启后验证（这一步必须做）：
+        lspci -nnk | grep -A3 -i nvidia
+
+        # 须看到即可解决：
+        # Kernel driver in use: vfio-pci
+        ```
+    !!! tip "后记"
+
+        - GPT越来越强了，搁我自己纯找文档修，肯定得修个两三天……太菜了TAT。
+        - 但是，也得懂计算机的运行原理，才能通过表象很快地定位到具体问题。
+        - 让其他人来，可能一通描述还给AI搞乱了。
+        - 所以“经验丰富+AI辅助”的确是当下(20260503)的最优解，至于以后AI能不能完全自主意识嘛……也许会有那么一天？再说，嘿嘿。

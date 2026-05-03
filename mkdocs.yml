@@ -44,13 +44,15 @@ nav:
   - PeachLake: 
     - index.md
     - 经验贴: 
-      - 01-AIO 配置流程: Server/01-AIO_Server.md
+      - 01-说点儿什么好呢？: Server/01-Say_What.md
       - 02-PVE 部署: Server/02-PVE_deploy.md
       - 03-PVE 核显直通: Server/03-CoreGPU_Passthrough.md
       - 04-PVE 解决空间自增长: Server/04-PVE_Disk.md
       - 05-本地服务器远程连接: Server/05-SSH_Remote_Local.md
       - 06-部署 NextCloud-Docker: Server/06-nextcloud_docker.md
       - 07-SSL 证书部署与更新: Server/07-ssl_update.md
+      - 08-Windows Server 2022 安装: Server/08-WinServ2022_install.md
+      - 09-浩哈哈的个人远程方案: Server/09-My_Remote_Solv.md
     - ToDo:
       - 许愿池里的🐢: Todo/list.md
 
