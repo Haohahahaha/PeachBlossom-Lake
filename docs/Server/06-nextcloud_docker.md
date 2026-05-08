@@ -189,6 +189,9 @@ networks:
 
 ### NextCloud 安装 Preview-Generator 后执行问题
 
+!!! note "记得先下载 Preview Generator 啊喂！"
+    应用商店打不开？记得[设置代理](https://peachlake.haohaha.cn/Server/02-PVE_deploy/#docker-nextcloud)
+
 1. 如果数据目录用的是 基于 PVE+TrueNAS 的方案来做的 nfs 挂载，那么就需要在 TrueNAS 的 CLI 中赋予其要 generate 的目录的权限，一般给 775 即可。
 
 2. 需要先设置缩略图格式和质量
