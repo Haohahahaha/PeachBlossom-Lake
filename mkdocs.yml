@@ -43,7 +43,7 @@ nav:
   - Algorithm: http://alg.haohaha.cn
   - PeachLake: 
     - index.md
-    - 经验贴: 
+    - 服务器端: 
       - 01-说点儿什么好呢？: Server/01-Say_What.md
       - 02-PVE 部署: Server/02-PVE_deploy.md
       - 03-PVE 核显直通: Server/03-CoreGPU_Passthrough.md
@@ -53,6 +53,8 @@ nav:
       - 07-SSL 证书部署与更新: Server/07-ssl_update.md
       - 08-Windows Server 2022 安装: Server/08-WinServ2022_install.md
       - 09-浩哈哈的个人远程方案: Server/09-My_Remote_Solv.md
+    - 使用教程:
+      - 01-rClone 安装与使用: Use/01-rClone.md    
     - ToDo:
       - 许愿池里的🐢: Todo/list.md
 
