@@ -1,5 +1,9 @@
 # rClone 使用教程
 
+!!! info "更新记录"
+
+    20260716: 完稿，但是目前只支持Windows平台，MacOS平台尚未有教程（主要是我当前手头儿也没有Mac）……请自行探索。
+
 !!! info ""
     
     author: Haohahahaha (Haorui Zhang)
