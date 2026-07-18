@@ -54,7 +54,8 @@ nav:
       - 08-Windows Server 2022 安装: Server/08-WinServ2022_install.md
       - 09-浩哈哈的个人远程方案: Server/09-My_Remote_Solv.md
     - 使用教程:
-      - 01-rClone 安装与使用: Use/01-rClone.md    
+      - 01-rClone Windows 使用教程: Use/01-rClone-Windows.md    
+      - rClone MacOS 使用教程: Use/02-rClone-MacOS.md 
     - ToDo:
       - 许愿池里的🐢: Todo/list.md
 

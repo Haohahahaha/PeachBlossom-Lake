@@ -1,4 +1,4 @@
-# rClone 使用教程
+# rClone Windows 使用教程
 
 !!! info "更新记录"
 
@@ -58,21 +58,21 @@
     
     - 解压缩
         
-        ![解压好的情况](./01-rClone/01.png) 
+        ![解压好的情况](./01-rClone-Windows/01.png) 
    
     - 进入解压的文件夹
         
-        ![进入解压的文件夹](./01-rClone/02.png)     
+        ![进入解压的文件夹](./01-rClone-Windows/02.png)     
     
     - 将最后一层文件夹整体剪切，粘贴到 `C:\Program Files` 下
         
-        ![粘贴1](./01-rClone/03.png) 
+        ![粘贴1](./01-rClone-Windows/03.png) 
         
-        ![粘贴2](./01-rClone/04.png) 
+        ![粘贴2](./01-rClone-Windows/04.png) 
     
     - 要求管理员权限，点击继续即可。
         
-        ![管理员权限](./01-rClone/05.png) 
+        ![管理员权限](./01-rClone-Windows/05.png) 
     
     - 粘贴好后即安装完成。
 
@@ -81,21 +81,21 @@
     
     - 点击 Install for all users 
        
-        ![install-f-a-u](./01-rClone/06.png) 
+        ![install-f-a-u](./01-rClone-Windows/06.png) 
     
     - 授予管理员权限
         
-        ![授予管理员权限](./01-rClone/07.png) 
+        ![授予管理员权限](./01-rClone-Windows/07.png) 
     
     - 点击同意协议（英文
     
-        ![点击同意协议](./01-rClone/08.png) 
+        ![点击同意协议](./01-rClone-Windows/08.png) 
 
     - <font color=red>**之后，一路确认**</font>
     
     - 安装完成时：取消勾选“启动rclone browser”
     
-        ![取消勾选](./01-rClone/09.png) 
+        ![取消勾选](./01-rClone-Windows/09.png) 
 
 #### 设置环境变量
 
@@ -103,21 +103,21 @@
 
     - 打开开始菜单
     
-        ![开始菜单](./01-rClone/10.png) 
+        ![开始菜单](./01-rClone-Windows/10.png) 
     
     - 直接键入环境变量（打开开始菜单后 直接键入文字 就等于 搜索）
     - 点击 `编辑系统环境变量`
         
-        ![找环境变量](./01-rClone/11.png)     
+        ![找环境变量](./01-rClone-Windows/11.png)     
     
     - 在弹出的窗口点击 `环境变量` （窗口的右下角）
     
-        ![环境变量](./01-rClone/12.png)  
+        ![环境变量](./01-rClone-Windows/12.png)  
     
     - 在新弹出的窗口中，下半部分 `系统变量` 的列表中，单击选择 `Path`
     - 点击下半部分-右下角的 `编辑`
     
-        ![编辑](./01-rClone/13.png) 
+        ![编辑](./01-rClone-Windows/13.png) 
     
     - 在新弹出的窗口中，点击 `新建`    
     - 输入路径
@@ -127,13 +127,13 @@
         - `C:\Program Files\Rclone Browser`
     
 
-        ![添加](./01-rClone/14.png) 
+        ![添加](./01-rClone-Windows/14.png) 
     
     - 输入完成之后，点击 `确定`，退出最上层窗口；    
     - 再点击 `确定`，退出次上层窗口；
     - 再点击 `确定`，退出最下层窗口；
   
-        ![退出](./01-rClone/15.png) 
+        ![退出](./01-rClone-Windows/15.png) 
 
 
 #### 配置挂载网盘
@@ -142,52 +142,52 @@
 
     - 此时去开始菜单，单击打开 `RCLone Browser`
 
-        ![打开rclone-browser](./01-rClone/16.png)
+        ![打开rclone-browser](./01-rClone-Windows/16.png)
 
     - 点击窗口左下角的 `Config...`
     
-        ![config](./01-rClone/17.png)
+        ![config](./01-rClone-Windows/17.png)
     
     - 此时弹出cmd窗口
         - 第一个问题 输入 `n`，回车
         - 第二个问题 输入你的网盘名称，要求英文（我就写 `Haohaha` 了）
         
-            ![问题1-2](./01-rClone/18.png)
+            ![问题1-2](./01-rClone-Windows/18.png)
         
         - 第三个问题 输入 `63`，即选择 `WebDAV`
         
-            ![问题3](./01-rClone/19.png)
+            ![问题3](./01-rClone-Windows/19.png)
 
         - 打开浏览器的新窗口，找网盘地址
 
-            ![怎么找网盘地址](./01-rClone/20.png)
+            ![怎么找网盘地址](./01-rClone-Windows/20.png)
         
         - 第四个问题 输入 `网盘的地址`
     
-            ![问题4](./01-rClone/21.png)
+            ![问题4](./01-rClone-Windows/21.png)
 
         - 第五个问题 输入 `2`，即选择 `NextCloud`
 
-            ![问题5](./01-rClone/22.png) 
+            ![问题5](./01-rClone-Windows/22.png) 
 
         - 第六个问题 输入 `用户名`，输入你的网盘用户名即可。
         - 第七个问题 输入 `y` 即使用密码
         - 第八个问题 输入 `密码`，输入你的网盘密码即可。
 
-            ![问题6-8](./01-rClone/23.png) 
+            ![问题6-8](./01-rClone-Windows/23.png) 
 
         - 第九个问题 直接回车跳过
         - 第十个问题 输入n，回车
 
-            ![问题9-10](./01-rClone/24.png) 
+            ![问题9-10](./01-rClone-Windows/24.png) 
 
         -  第11个问题 输入y 保存配置
 
-            ![问题11](./01-rClone/25.png) 
+            ![问题11](./01-rClone-Windows/25.png) 
 
         -  第12个问题 输入q 退出设置
 
-            ![问题12](./01-rClone/26.png) 
+            ![问题12](./01-rClone-Windows/26.png) 
 
 ## 二、使用
 
@@ -195,25 +195,25 @@
 
     - 回到主界面，我们打开我们刚才配置好的网盘
 
-        ![打开网盘](./01-rClone/27.png) 
+        ![打开网盘](./01-rClone-Windows/27.png) 
 
     - 选中你要上传到的地方（即某个文件夹），点击上传按钮
 
-        ![点击上传](./01-rClone/28.png)  
+        ![点击上传](./01-rClone-Windows/28.png)  
 
     - 此时弹出一个窗口，可以选择 文件 或者 整个文件夹 来上传。
 
-        ![选择文件or文件夹](./01-rClone/29.png)  
+        ![选择文件or文件夹](./01-rClone-Windows/29.png)  
 
     - 上传窗口详解如下，默认直接点击 `Run` 就可以了其实。
 
-        ![上传窗口](./01-rClone/30.png)  
+        ![上传窗口](./01-rClone-Windows/30.png)  
 
 
     - 上传界面查看如下：
 
-        ![上传查看1](./01-rClone/31.png)  
-        ![上传查看2](./01-rClone/32.png)  
+        ![上传查看1](./01-rClone-Windows/31.png)  
+        ![上传查看2](./01-rClone-Windows/32.png)  
 
 
 ## 三、结语
