@@ -2,6 +2,7 @@
 
 !!! info "更新记录"
 
+    - 20260718: MacOS 有教程啦！[点击查看](https://peachlake.haohaha.cn/Use/02-rClone-MacOS/)
     - 20260716: 完稿
         - 但是目前只支持Windows平台
         - MacOS平台尚未有教程（主要是我当前手头儿也没有Mac）……当前请自行探索。
